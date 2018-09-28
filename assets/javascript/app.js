@@ -60,6 +60,7 @@ var questions = [question1, question2, question3, question4, question5]
 //my array of my question objects
 
 var count = 0;
+var time = 30000;
 //used to keep track of which question is displayed
 
 // $(".question").text(question1.question);
@@ -77,7 +78,16 @@ function displayQuestion() {
 // function to display a question based on the count
 
 displayQuestion()
+function timer() {
+    setInterval(countdown, 1000)
+}
+// need an on click function
 
+if (time == 0) {
+    count++;
+
+
+}
 //next I need a question timer
 //then I need to make something that switches the question once you guess an answer or time runs out
 //something to tally up a score as well
