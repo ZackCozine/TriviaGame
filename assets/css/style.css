@@ -1,0 +1,59 @@
+@font-face {
+    font-family: packers_font;
+    src: url(../images/packers_font.ttf)
+}
+body, html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url(../images/lambeau_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#title {
+    color: green;
+    text-shadow: 1px 1px yellow;
+    text-align: center;
+    background-color: black;
+    border-radius: 15px 50px;
+    padding-bottom: 10px;
+    margin-top: 8px;
+    font-family: packers_font;
+}
+.question {
+    background-color: black;
+    color: green;
+    text-align: center;
+    border-radius: 15px 50px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+#answers1 {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    border-radius: 15px 50px;
+    opacity: 0.7;
+}
+#answers2 {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    border-radius: 15px 50px;
+    opacity: 0.7;
+}
+#answers3 {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    border-radius: 15px 50px;
+    opacity: 0.7;
+}
+#answers4 {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    border-radius: 15px 50px;
+    opacity: 0.7;
+}
