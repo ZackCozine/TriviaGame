@@ -1,80 +1,84 @@
-function questions(question, answer1, answer2, answer3, answer4,qNum) {
-    this.question = question;
-    this.answer1 = answer1;
-    this.answer2 = answer2;
-    this.answer3 = answer3;
-    this.answer4 = answer4;
-    this.qNum = qNum;
-};
-
-
+// function questions(q, answers) {
+//     this.q = q;
+//     this.answers = answers;  
+// };
+// commented out for now
+//var answers 
 //creating a prototype to hold the properties of each question variable
 
-var question1 = new questions(
-    "If the Green Bay Packers football team dissolves, what happens to the money?",
+var question1 = {
+    question: "If the Green Bay Packers football team dissolves, what happens to the money?",
     // question1
-    "The money goes to the Green Bay Charity Foundation",
+    answer1 = { a: "The money goes to the Green Bay Charity Foundation", isCorrect: true },
     // correct answer
-    "The owner gets it all",
-    "The stock owners get it",
-    "The NFL gets it",
-    1,
-);
+    answer2 = { a: "The owner gets it all", isCorrect: false },
+    answer3 = { a: "The stock owners get it", isCorrect: false },
+    answer4 = { a: "The NFL gets it", isCorrect: false },
+};
 
-var question2 = new questions(
-    "How did the Green Bay Packers get their team name?",
+var question2 = {
+    question: "How did the Green Bay Packers get their team name?",
     // question2
-    "A packer is another name for a person from Wisconsin",
-    "It is the last name of the owner",
-    "A local meat packing company donated money for the team",
+    answer1 = { a: "A packer is another name for a person from Wisconsin", isCorrect: false },
+    answer2 = { a: "It is the last name of the owner", isCorrect: false },
+    answer3 = { a: "A local meat packing company donated money for the team", isCorrect: true },
     //correct answer
-    "The NFL chose the team name",
-    2,
-);
+    answer4 = { a: "The NFL chose the team name", isCorrect: false },
+};
 
-var question3 = new questions(
-    "Who won Super Bowl I?",
+var question3 = {
+    question: "Who won Super Bowl I?",
     // question3
-    "The Minnesota Vikings",
-    "The Buffalo Bills",
-    "The New England Patriots",
-    "The Green Bay Packers",
+    answer1 = { a: "The Minnesota Vikings", isCorrect: false },
+    answer2 = { a: "The Buffalo Bills", isCorrect: false },
+    answer3 = { a: "The New England Patriots", isCorrect: false },
+    answer4 = { a: "The Green Bay Packers", isCorrect: true },
     // correct answer
-    3,
-);
+};
 
-var question4 = new questions(
-    "Who was Brett Favre's first completion to?",
+var question4 = {
+    question: "Who was Brett Favre's first completion to?",
     // question4
-    "Sterling Sharpe",
-    "Himself",
+    answer1 = { a: "Sterling Sharpe", isCorrect: false },
+    answer2 = { a: "Himself", isCorrect: true },
     // correct answer
-    "Donald Driver",
-    "Vince Lombardi",
-    4,
-);
+    answer3 = { a: "Donald Driver", isCorrect: false },
+    answer4 = { a: "Vince Lombardi", isCorrect: false },
+};
 
-var question5 = new questions(
-    "Who was the coach of the Green Bay Packers when they won their first Super Bowl?",
+var question5 = {
+    question: "Who was the coach of the Green Bay Packers when they won their first Super Bowl?",
     // question5
-    "Ray McLean",
-    "Mike McCarthy",
-    "Vince Lombardi",
+    answer1 = { a: "Ray McLean", isCorrect: false },
+    answer2 = { a: "Mike McCarthy", isCorrect: false },
+    answer3 = { a: "Vince Lombardi", isCorrect: true },
     // correct answer
-    "Mike Holmgren",
-    5,
-);
+    answer4 = { a: "Mike Holmgren", isCorrect: false },
+};
+
+var questions = [question1, question2, question3, question4, question5]
+//my array of my question objects
 
 var count = 0;
 //used to keep track of which question is displayed
 
-$(".question").text(question1.question);
-$("#answers1").text(question1.answer1);
-$("#answers2").text(question1.answer2);
-$("#answers3").text(question1.answer3);
-$("#answers4").text(question1.answer4);
+// $(".question").text(question1.question);
+$("#answers1").text(questions.question1.answer1.a);
+//not sure what I did but it appears I broke everything
+$("#answers2").text(question1.answer2.a);
+$("#answers3").text(question1.answer3.a);
+$("#answers4").text(question1.answer4.a);
 // changing the text of the buttons and question section to match up with the question
+//isnt working like I thought it would must have misunderstood something
 
 function displayQuestion() {
-    $(".question").text();
-  }
+    $(".question").text(questions.question1.text);
+}
+// function to display a question based on the count
+
+displayQuestion()
+
+//next I need a question timer
+//then I need to make something that switches the question once you guess an answer or time runs out
+//something to tally up a score as well
+//something that checks the answer for isCorrect true or false
